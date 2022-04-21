@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https: //fonts.googleapis.com/css2?family= Pacifico & display = swap" rel="stylesheet">
+  <script src="https://use.fontawesome.com/f2cdf3bdeb.js"></script>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <style>
+  body 
+{
+	padding:0px;
+	height: 100%; 
+	
+	margin:0;
+	background-image: url('4.jpg_large');
+	font-family:Arial, Sans-serif;
+	background-attachment: fixed;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+	font-family: 'Pacifico', cursive;
+	
+}
+
+
+
+
+#basic 
+{
+	
+	width:75%;
+	min-height:500px;
+	height: 1000px;
+	padding:20px 20px 20px 20px;
+	background:#fff;
+	opacity: 0.8;	
+}
+
+a 
+{
+	font-size:28px;
+	color: black;
+	font-family: 'Pacifico', cursive;
+	text-decoration: none;
+	font-weight: bold;
+	
+}
+a:hover{
+  color: #800000; /* Меняем цвет текста */
+}
+p 
+{
+	font-size:28px;
+	width: 80%;
+	color: black;
+	font-family: 'Pacifico', cursive;
+	text-decoration: none;
+	font-weight: bold;
+}
+h1
+{
+font-size:40px;
+	color: black;
+	font-family: 'Pacifico', cursive;
+	text-decoration: none;
+	font-weight: bold;
+}
+block {
+	position: relative;
+	
+}
+.block:before {
+	content: "";
+	position: absolute;
+	top: 3px;
+	opacity: 0.8;
+	width: 60%;
+	height: 1000px;
+	left: 3px;
+	bottom: 3px;
+	right: 3px;
+	background-color: #fff;
+	z-index: 1;
+	border-radius: 4px;
+}
+.block:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 1005px;
+	width: 60.4%;
+	background: linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #FFDC18, #FF3706);
+	z-index: -1;
+	border-radius: 4px;
+}
+.block-content {
+	z-index: 999;
+	width: 60%;
+	position: relative;
+	padding: 10px 30px;
+	font-size: 16px;
+}
+.examplebtn {
+  font-family: 'Comfortaa';
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff !important;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px ridge #f3c846;
+  background: #1e6e35;
+  background: linear-gradient(to top, #1e6e35, #fcf5f4);
+}
+.examplebtn:hover {
+  color: #cccccc !important;
+  background: #000000;
+  background: linear-gradient(to top, #000000, #ff2a00);
+}
+i {
+      color: #800000;
+	   font-size: 30px;
+      }
+      
+  
+
+</style>
+<script>
+var i=0;
+function func_yes(){
+//ветка "да" где подключился на пробное занятие
+if(i==0){
+document.getElementById("que").textContent="Заполните свою базу данных и попробуйте снова";
+document.getElementById("but1").style.visibility="hidden";
+document.getElementById("but2").style.visibility="hidden";
+
+}
+
+
+//ветка "да" где клиент отвечает
+if(i==1){
+document.getElementById("que").textContent="Выберите правильный формат файла (.db)";
+document.getElementById("but1").style.visibility="hidden";
+document.getElementById("but2").style.visibility="hidden";
+
+}
+
+
+
+}
+function func_no(){
+//ветка "нет" где подключился на пробное занятие
+if(i==0){
+document.getElementById("que").textContent="Правильный формат файла?(.db) ";
+
+}
+i=i+1;
+//ветка "нет" где клиент отвечает
+if(i==2){
+document.getElementById("que").textContent="Обратитесь в техническую поддержку";
+document.getElementById("but1").style.visibility="hidden";
+document.getElementById("but2").style.visibility="hidden";
+
+}
+
+}
+
+
+</script>
+</head>
+<body >
+    
+	<div class="block">
+    <div  class="block-content">
+	
+     <h1>2. Не выгружаются данные из базы данных</h1><br>
+	 <br>
+	 
+	 <p id="que">
+
+Есть данные в Базе данных?
+</p>
+<div id="main">
+<button id="but2" class="examplebtn" onclick="func_no()">Да</button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<button id="but1" class="examplebtn" onclick="func_yes()">Нет</button>  
+
+</div>
+		<br><br><br>
+		      <i class="fa fa-reply fa-border  fa-lg"></i>
+	 <a href="4_problem.html">Назад к меню проблем</a><br>
+		<i class="fa fa-reply-all   fa-2x" ></i>
+
+	 <a href="../ИЭТР.html">Назад к главному меню</a><br>
+    </div></div>
+	
+      
+</body>
+
+</html>
